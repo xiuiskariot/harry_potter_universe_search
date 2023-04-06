@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HP Characters Finder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <main>
+    <div class="container ">
+      <h1>Harry Potter</h1>
+      <h2>View all characters from the Harry Potter universe</h2>
+
+      <form>
+        <div class="input_form">
+          <label for="hero_name" class="input_label">Name</label>
+          <input type="text" id="hero_name" placeholder="Hermione">
+        </div>
+        <div class="input_form">
+          <label for="school" class="input_label">School</label>
+          <select id="school">
+            <option selected disabled class="selected">Choose school</option>
+          </select>
+        </div>
+      </form>
+    </div>
+    <section>
+      <div class="container">
+        <div class="grid">
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="./script/select.js" type="module"></script>
+  <script src="./script/cards.js" type="module"></script>
+</body>
+</html>
