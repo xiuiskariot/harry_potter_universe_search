@@ -2,7 +2,8 @@ import { data } from "./hp.js";
 
 const grid = document.querySelector(".grid")
 const input = document.querySelector("input");
-const select = document.querySelector("select")
+const select = document.querySelector("select");
+const option = document.querySelector(".selected");
 
 function createCard(obj) {
   let card = document.createElement("div");
@@ -45,14 +46,19 @@ function filtredCards(event) {
   let inputValue = event.target.value.toLowerCase().trim();
   let selectValue = event.target.value;
   grid.innerHTML = "";
-  let filtred =
-    data.filter((card) => card.name.toLowerCase().includes(inputValue) || card.house.includes(selectValue))
+ 
+  let filtred = data.filter(
+    (card) =>
+      (card.name.toLowerCase().includes(inputValue) &&
+      card.house.includes(selectValue == option)) ||
+      card.house.includes(selectValue)
 
-  
-  renderCards(filtred)
+  );
+
+  renderCards(filtred);
 }
 
 input.addEventListener("input", filtredCards);
-select.addEventListener("change", filtredCards)
+select.addEventListener("click", filtredCards)
 
 renderCards(data)
